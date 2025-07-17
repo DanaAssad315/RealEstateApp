@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:elevation="8dp"
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Special Offer"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="28dp" />
+
+            <!-- EditTexts -->
+            <EditText
+                android:id="@+id/editPropertyId"
+                style="@style/StyledEditText"
+                android:hint="Property ID"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTitle"
+                style="@style/StyledEditText"
+                android:hint="Offer Title"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editOfferDescription"
+                style="@style/StyledEditText"
+                android:hint="Offer Description"
+                android:inputType="textMultiLine"
+                android:minLines="3" />
+
+            <EditText
+                android:id="@+id/editStartDate"
+                style="@style/StyledEditText"
+                android:hint="Start Date (YYYY-MM-DD)"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/editEndDate"
+                style="@style/StyledEditText"
+                android:hint="End Date (YYYY-MM-DD)"
+                android:inputType="date" />
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/btnCreateOffer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Create Offer"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#2E7D32"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:elevation="4dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Existing Offers"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerOffers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

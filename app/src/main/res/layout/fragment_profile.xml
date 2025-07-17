@@ -1,0 +1,183 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="#FADADD">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FCE4EC">
+
+        <ImageView
+            android:id="@+id/imageViewProfilePic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="Profile Picture"
+            app:tint="#EC407A" />
+
+        <ImageButton
+            android:id="@+id/buttonChangeProfilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            app:layout_constraintTop_toBottomOf="@id/imageViewProfilePic"
+            app:layout_constraintStart_toStartOf="@id/imageViewProfilePic"
+            app:layout_constraintEnd_toEndOf="@id/imageViewProfilePic"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F8BBD0"
+            android:contentDescription="Change Profile Picture"
+            app:tint="#F06292" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            app:boxBackgroundColor="#FFF0F5"
+            app:hintTextColor="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/buttonChangeProfilePic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#880E4F" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            app:boxBackgroundColor="#FFF0F5"
+            app:hintTextColor="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/textFieldFirstName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#880E4F"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            app:boxBackgroundColor="#FFF0F5"
+            app:hintTextColor="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/textFieldLastName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="#880E4F"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:textColor="#C2185B"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toBottomOf="@id/textFieldPhoneNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldCurrentPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Current Password (Optional)"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="#FFF0F5"
+            app:hintTextColor="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/textViewChangePassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCurrentPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="#880E4F"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldNewPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="New Password"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="#FFF0F5"
+            app:hintTextColor="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/textFieldCurrentPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="#880E4F"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Confirm New Password"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="#FFF0F5"
+            app:hintTextColor="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/textFieldNewPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="#880E4F"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonUpdateProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#EC407A"
+            app:layout_constraintTop_toBottomOf="@id/textFieldConfirmPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

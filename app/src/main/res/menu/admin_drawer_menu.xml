@@ -1,0 +1,9 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/nav_statistics" android:title="Statistics Dashboard" android:icon="@drawable/ic_stat"/>
+<item android:id="@+id/nav_delete_customers" android:title="Delete Customers" android:icon="@drawable/ic_delet" />
+<item android:id="@+id/nav_add_admin" android:title="Add New Admin"  android:icon="@drawable/ic_add"/>
+<item android:id="@+id/nav_reservations" android:title="View All Reservations" android:icon="@drawable/ic_res" />
+<item android:id="@+id/nav_offers" android:title="Create Special Offers" android:icon="@drawable/ic_offer" />
+<item android:id="@+id/nav_logout" android:title="Logout"  android:icon="@drawable/ic_logout"/>
+</menu>

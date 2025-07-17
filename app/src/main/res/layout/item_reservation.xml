@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reservation_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reservation Time"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:layout_marginBottom="4dp"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="4dp" />
+
+                <TextView
+                    android:id="@+id/reservation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Title"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/reservation_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp"
+                    android:drawableStart="@drawable/ic_locations"
+                    android:drawablePadding="4dp" />
+
+                <TextView
+                    android:id="@+id/reservation_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0"
+                    android:textSize="16sp"
+                    android:textColor="#4CAF50"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+
+
+                <TextView
+                    android:id="@+id/reservation_created_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created at..."
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_delete_reservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="delete reservation"
+                android:layout_gravity="center_vertical"
+                app:tint="#F44336" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginVertical="4dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

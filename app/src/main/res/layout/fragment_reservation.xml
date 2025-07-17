@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <ProgressBar
+        android:id="@+id/loading_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+\    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Reservations"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_calendar"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Calendar icon" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reservations_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:visibility="visible" />
+        <LinearLayout
+            android:id="@+id/empty_state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_calendar"
+                android:alpha="0.3"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="No reservations" />
+
+            <TextView
+                android:id="@+id/empty_state_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No reservations found.\nStart exploring properties to make your first reservation!"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:textAlignment="center"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

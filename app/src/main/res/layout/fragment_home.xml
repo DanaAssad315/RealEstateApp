@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:fitsSystemWindows="true"
+         />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="16dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#CCFFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:id="@+id/title_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:text="About Us"
+                    android:textColor="#2C3E50"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
+                    android:paddingBottom="24dp"
+                    android:text="We are a leading real estate company specializing in Apartments, Villas, and Land. Our mission is to provide quality properties in Palestine, Jordan, and Syria, ensuring customer satisfaction and trust."
+                    android:textColor="#34495E"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/title_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:text="Company History"
+                    android:textColor="#2C3E50"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
+                    android:paddingBottom="24dp"
+                    android:text="Founded in 2005, our company has helped over 10,000 clients find their perfect property. With offices in Ramallah, Amman, and Damascus, we continue to grow and serve with dedication and transparency."
+                    android:textColor="#34495E"
+                    android:textSize="16sp" />
+
+<!--                <Button-->
+<!--                    android:id="@+id/checkDbButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Check DB" />-->
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>
